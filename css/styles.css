@@ -7,10 +7,18 @@
 }
 
 /* Globales */
-
 html {
     font-size: 62.5%;
     box-sizing: border-box; /* Hack para Box Model */
+    scroll-snap-type: y mandatory;
+}
+
+/** Scroll Snap**/
+.servicios,
+.navegacion-principal,
+.formulario {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
 }
 
 *, *:before, *:after {
@@ -168,7 +176,6 @@ h1,h2,h3 {
 }
 
 /** Servicios **/
-
 @media (min-width: 768px) {
     .servicios {
         display: grid;
@@ -204,7 +211,6 @@ h1,h2,h3 {
 }
 
 /** Contacto **/
-
 .formulario {
     background-color: var(--gris);
     width: min( 60rem, 100% ); /** Utilizar el valor más pequeño **/
